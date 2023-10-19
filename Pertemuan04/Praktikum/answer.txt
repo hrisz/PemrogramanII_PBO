@@ -8,4 +8,6 @@ BAGIAN I
 
 BAGIAN II
 
+8. Karena pada class Book_714220061, tidak ada property dengan nama MyTitle yang didefinisikan dalam kelas Book_714220061. maka dari itu, class Book_714220061 tidak dapat mengakses properti MyTitle. Istilah dalam konsep OOP yang sesuai dengan kasus ini yaitu enkapsulasi, salah satu konsep OOP yang mencakup penyembunyian detail implementasi dan pengungkapan hanya informasi yang relevan melalui interface yang disediakan oleh class
 
+12. dengan menambahkan kode base(type, title), maka dapat memanggil konstruktor dari kelas "Product_714220061" yang dimana kita memanggil type dan title di dalam parameternya sehingga dapat menampilkan nilai dari konstruktor tersebut
