@@ -1,0 +1,7 @@
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\bin\Debug\P4_1_714220061.exe.config
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\bin\Debug\P4_1_714220061.exe
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\bin\Debug\P4_1_714220061.pdb
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\obj\Debug\P4_1_714220061.csproj.AssemblyReference.cache
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\obj\Debug\P4_1_714220061.csproj.CoreCompileInputs.cache
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\obj\Debug\P4_1_714220061.exe
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan04\Praktikum\P4_1_714220061\P4_1_714220061\P4_1_714220061\obj\Debug\P4_1_714220061.pdb

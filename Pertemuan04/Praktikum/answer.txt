@@ -1,0 +1,11 @@
+BAGIAN I
+
+14. Error "CS0122 'Product_714220061.myType' is inaccessible due to its protection level" muncul karena object myType pada class Product_714220061 bersifat protected dan hanya dapat diakses pada classnya atau turunannya sendiri.
+
+19. Karena tidak ada isi apapun pada object MyType (null), maka dari itu ketika di debug tidak menghasilkan apapun.
+
+24. Pada object string MyType dalam class Product_714220061 akan mengembalikan nilai dari MyType dan object MyType tersebut telah diisi dengan nilai string "DVD", oleh karena itu ketika fungsi Console.WriteLine(myProduct.MyType) dipanggil, nilai dari object myProduct.MyType dapat dicetak.
+
+BAGIAN II
+
+
