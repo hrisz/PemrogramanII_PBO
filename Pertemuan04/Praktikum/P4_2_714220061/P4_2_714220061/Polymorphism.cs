@@ -18,7 +18,7 @@ namespace P4_2_714220061
     {
         public override void Teyvat()
         {
-            Console.WriteLine("Creating The Seven Archon");
+            Console.WriteLine("Creating The Seven Archons");
         }
     }
 
@@ -26,7 +26,7 @@ namespace P4_2_714220061
     {
         public override void Teyvat()
         {
-            Console.WriteLine("Calling The Seven Sovereign");
+            Console.WriteLine("Calling The Seven Sovereigns");
         }
     }
 }

@@ -14,7 +14,6 @@ namespace P4_2_714220061
             {
                 name = "Raiden Shogun",
                 age = 400
-
             };
             Console.WriteLine(ava1.name);
             Console.WriteLine(ava1.status);
@@ -47,11 +46,11 @@ namespace P4_2_714220061
 
             //Polymorphism
             Console.WriteLine("Polymorphism:");
-            Polymorphism tsaritsa = new Polymorphism();
+            Polymorphism tsaritsa = new archons();
             tsaritsa.Teyvat();
 
-            Polymorphism apep = new Polymorphism();
-            apep.Teyvat();
+            Polymorphism nibelung = new sovereign();
+            nibelung.Teyvat();
         }
     }
 }
