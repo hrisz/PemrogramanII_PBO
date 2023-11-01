@@ -71,11 +71,7 @@ namespace P5_4_714220061
             {
                 pilihanJadwal = "Senin & Rabu, 14.00 - 16.00";
             }
-
-            if (pilihanJadwal1.Checked)
-            {
-                pilihanJadwal = "Senin & Rabu, 14.00 - 16.00";
-            }
+            
             else if (pilihanJadwal2.Checked)
             {
                 pilihanJadwal = "Selasa & Kamis, 14.00 - 16.00";
