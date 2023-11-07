@@ -44,13 +44,29 @@ namespace P6_4_714220061
                                (serverSelection == "Europe (EU)" && showUID.Length > 0 && showUID[0] == '7') ||
                                (serverSelection == "TW/HK/MO (SAR)" && showUID.Length > 0 && showUID[0] == '9');
 
-            if (showName != "" && showEmail != "" && validserver && inputRank.Value >= 15 && validasi1.All(Char.IsUpper) && validasi1 == "SETUJU" && validasi2.All(Char.IsLower) && validasi2 == "setuju")
+            if (showName != "" && showEmail != "" && validserver && inputRank.Value >= 15 && inputUID.Text.Length == 9 && validasi1.All(Char.IsUpper) && validasi1 == "SETUJU" && validasi2.All(Char.IsLower) && validasi2 == "setuju")
             {
                 MessageBox.Show("Name: " + showName + "\nEmail: " + showEmail + "\nServer: " + showServer + "\nUID: " + showUID + "\nAdventure Rank: " + showRank, "Data Pembelian", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if ((confirm01.Text).Any(Char.IsLower))
+            {
+                MessageBox.Show("Textbox Confirm #1 perlu diperbaiki, kalimat harus terdiri dari uppercase!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if ((confirm01.Text != "SETUJU"))
+            {
+                MessageBox.Show("Textbox Confirm #1 perlu diperbaiki, ketik 'SETUJU' dalam uppercase!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if ((confirm02.Text).Any(Char.IsUpper))
+            {
+                MessageBox.Show("Textbox Confirm #2 perlu diperbaiki, kalimat harus terdiri dari lowercase!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if ((confirm02.Text != "setuju"))
+            {
+                MessageBox.Show("Textbox Confirm #2 perlu diperbaiki, ketik 'setuju' dalam lowercase!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
-                MessageBox.Show("Perbaiki semua form terlebih dahulu!", "Terjadi Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Isi dan perbaiki semua form terlebih dahulu!", "Terjadi Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -129,7 +145,7 @@ namespace P6_4_714220061
 
                 string selectedServer = inputServer.SelectedItem.ToString();
 
-                if ((inputUID.Text).All(Char.IsNumber))
+                if ((inputUID.Text).All(Char.IsNumber) && inputUID.Text.Length == 9)
                 {
                     sysCorrect.SetError(inputUID, "Correct");
                     sysWarning.SetError(inputUID, "");
@@ -147,7 +163,12 @@ namespace P6_4_714220061
                     sysWarning.SetError(inputUID, "Box wajib diisi!");
                     sysWrong.SetError(inputUID, "");
                 }
-
+                if (inputUID.Text.Length != 9)
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "UID harus terdiri dari 9 angka");
+                }
                 if (selectedServer == "Asia" && inputUID.Text.Length < 1)
                 {
                     inputUID.Text = "8";
