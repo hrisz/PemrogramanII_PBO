@@ -114,9 +114,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(467, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 31);
+            this.label1.Size = new System.Drawing.Size(267, 31);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Account Trade Center";
+            this.label1.Text = "Game Account Center";
             // 
             // label2
             // 
@@ -138,6 +138,7 @@
             this.inputName.Name = "inputName";
             this.inputName.Size = new System.Drawing.Size(301, 22);
             this.inputName.TabIndex = 5;
+            this.inputName.TextChanged += new System.EventHandler(this.inputName_TextChanged);
             this.inputName.Leave += new System.EventHandler(this.inputName_Leave);
             // 
             // label3
@@ -202,6 +203,7 @@
             this.inputUID.Name = "inputUID";
             this.inputUID.Size = new System.Drawing.Size(301, 22);
             this.inputUID.TabIndex = 10;
+            this.inputUID.TextChanged += new System.EventHandler(this.inputUID_TextChanged);
             this.inputUID.Leave += new System.EventHandler(this.inputUID_Leave);
             // 
             // inputEmail
@@ -212,6 +214,7 @@
             this.inputEmail.Name = "inputEmail";
             this.inputEmail.Size = new System.Drawing.Size(301, 22);
             this.inputEmail.TabIndex = 12;
+            this.inputEmail.TextChanged += new System.EventHandler(this.inputEmail_TextChanged);
             this.inputEmail.Leave += new System.EventHandler(this.inputEmail_Leave);
             // 
             // label6
@@ -246,6 +249,7 @@
             this.confirm02.Name = "confirm02";
             this.confirm02.Size = new System.Drawing.Size(198, 22);
             this.confirm02.TabIndex = 16;
+            this.confirm02.TextChanged += new System.EventHandler(this.confirm02_TextChanged);
             this.confirm02.Leave += new System.EventHandler(this.confirm02_Leave);
             // 
             // label8
@@ -405,6 +409,7 @@
             this.confirm01.Name = "confirm01";
             this.confirm01.Size = new System.Drawing.Size(198, 22);
             this.confirm01.TabIndex = 27;
+            this.confirm01.TextChanged += new System.EventHandler(this.confirm01_TextChanged);
             this.confirm01.Leave += new System.EventHandler(this.confirm01_Leave);
             // 
             // Form1
@@ -444,7 +449,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Cornsilk;
             this.Name = "Form1";
-            this.Text = "Genshin Impact ATC";
+            this.Text = "Genshin Impact GAC";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputRank)).EndInit();

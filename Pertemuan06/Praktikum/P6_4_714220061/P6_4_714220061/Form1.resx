@@ -3661,12 +3661,12 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>54</value>
+    <value>25</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAu4AAAGmCAYAAAAj/gFWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAA/7JJREFUeF68neea27jSbmdsd1TOOWe11Dnbc/+XhfOuAkBRanXbs/f+zo/3AQMY
+        vAAADrwBlbxySQAA/7JJREFUeF68neea27jSbmdsd1TOOWe11Dnbc/+XhfOuAkBRanXbs/f+zo/3AQMY
         RBHAQrFQ+Ovy/Nz9XmefbNtX5je6PDt1uXzJ5XJFW47bLs9I47Kk7dnLrPIpb6Hm8oW6KxTrrlxpeJX9
         ckWqVpuuVmu5er3tms22a7Uk0pTY3my0XUMiH+IYjt0/vqP8HVezbX57sdRw9VbXtTo915RI0+r1+m7U
         H7iO8hQKFZfNllw2k3PVctX1tH88GLjJYOgmw5GbRo3GbjGduvVy4a6WS3e1WrrteuWuN1fuZrtxt9cb

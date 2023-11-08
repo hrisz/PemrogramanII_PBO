@@ -44,7 +44,7 @@ namespace P6_4_714220061
                                (serverSelection == "Europe (EU)" && showUID.Length > 0 && showUID[0] == '7') ||
                                (serverSelection == "TW/HK/MO (SAR)" && showUID.Length > 0 && showUID[0] == '9');
 
-            if (showName != "" && showEmail != "" && validserver && inputRank.Value >= 15 && inputUID.Text.Length == 9 && validasi1.All(Char.IsUpper) && validasi1 == "SETUJU" && validasi2.All(Char.IsLower) && validasi2 == "setuju")
+            if (showName != "" && showEmail != "" && Regex.IsMatch(showEmail, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$") && validserver && inputRank.Value >= 15 && inputUID.Text.Length == 9 && validasi1.All(Char.IsUpper) && validasi1 == "SETUJU" && validasi2.All(Char.IsLower) && validasi2 == "setuju")
             {
                 MessageBox.Show("Name: " + showName + "\nEmail: " + showEmail + "\nServer: " + showServer + "\nUID: " + showUID + "\nAdventure Rank: " + showRank, "Data Pembelian", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -301,6 +301,192 @@ namespace P6_4_714220061
                 sysCorrect.SetError(confirm01, "");
                 sysWarning.SetError(confirm01, "");
                 sysWrong.SetError(confirm01, "Kata harus dalam uppercase dan kalimat 'SETUJU'");
+            }
+        }
+
+        private void inputName_TextChanged(object sender, EventArgs e)
+        {
+            if ((inputName.Text).All(Char.IsLetter))
+            {
+                sysCorrect.SetError(inputName, "Correct");
+                sysWarning.SetError(inputName, "");
+                sysWrong.SetError(inputName, "");
+            }
+            else
+            {
+                sysCorrect.SetError(inputName, "");
+                sysWarning.SetError(inputName, "");
+                sysWrong.SetError(inputName, "Hanya boleh menerima huruf!");
+            }
+            if (inputName.Text == "")
+            {
+                sysCorrect.SetError(inputName, "");
+                sysWarning.SetError(inputName, "Box wajib diisi!");
+                sysWrong.SetError(inputName, "");
+            }
+        }
+
+        private void inputEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(inputEmail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$"))
+            {
+                sysCorrect.SetError(inputEmail, "Correct");
+                sysWarning.SetError(inputEmail, "");
+                sysWrong.SetError(inputEmail, "");
+            }
+            else
+            {
+                sysCorrect.SetError(inputEmail, "");
+                sysWarning.SetError(inputEmail, "");
+                sysWrong.SetError(inputEmail, "Format email salah!\nContoh: devs_account@hoyoverse.com");
+            }
+            if (inputEmail.Text == "")
+            {
+                sysCorrect.SetError(inputEmail, "");
+                sysWarning.SetError(inputEmail, "Box wajib diisi!");
+                sysWrong.SetError(inputEmail, "");
+            }
+        }
+
+        private void inputUID_TextChanged(object sender, EventArgs e)
+        {
+            if (inputServer.SelectedItem != null)
+            {
+
+                string selectedServer = inputServer.SelectedItem.ToString();
+
+                if ((inputUID.Text).All(Char.IsNumber) && inputUID.Text.Length == 9)
+                {
+                    sysCorrect.SetError(inputUID, "Correct");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "");
+                }
+                else
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "Hanya boleh menerima angka!");
+                }
+                if (inputUID.Text == "")
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "Box wajib diisi!");
+                    sysWrong.SetError(inputUID, "");
+                }
+                if (inputUID.Text.Length != 9)
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "UID harus terdiri dari 9 angka");
+                }
+                if (selectedServer == "Asia" && inputUID.Text.Length < 1)
+                {
+                    inputUID.Text = "8";
+                    inputUID.SelectionStart = inputUID.Text.Length;
+                }
+                else if (selectedServer == "Asia" && inputUID.Text[0] != '8')
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "Server Asia harus diawali dengan angka UID 8!");
+                }
+
+                if (selectedServer == "America (NA)" && inputUID.Text.Length < 1)
+                {
+                    inputUID.Text = "6";
+                    inputUID.SelectionStart = inputUID.Text.Length;
+                }
+                else if (selectedServer == "America (NA)" && inputUID.Text[0] != '6')
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "Server Asia harus diawali dengan angka UID 6!");
+                }
+
+                if (selectedServer == "Europe (EU)" && inputUID.Text.Length < 1)
+                {
+                    inputUID.Text = "7";
+                    inputUID.SelectionStart = inputUID.Text.Length;
+                }
+                else if (selectedServer == "Europe (EU)" && inputUID.Text[0] != '7')
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "Server Asia harus diawali dengan angka UID 7!");
+                }
+
+                if (selectedServer == "TW/HK/MO (SAR)" && inputUID.Text.Length < 1)
+                {
+                    inputUID.Text = "9";
+                    inputUID.SelectionStart = inputUID.Text.Length;
+                }
+                else if (selectedServer == "TW/HK/MO (SAR)" && inputUID.Text[0] != '9')
+                {
+                    sysCorrect.SetError(inputUID, "");
+                    sysWarning.SetError(inputUID, "");
+                    sysWrong.SetError(inputUID, "Server Asia harus diawali dengan angka UID 9!");
+                }
+            }
+
+            if (inputUID.MaxLength > 9)
+            {
+                MessageBox.Show("Nomor UID tidak boleh lebih dari 9!", "Maxlength UID mencapai batas!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void confirm01_TextChanged(object sender, EventArgs e)
+        {
+            if ((confirm01.Text).All(Char.IsUpper) && (confirm01.Text == "SETUJU"))
+            {
+                sysCorrect.SetError(confirm01, "Correct");
+                sysWarning.SetError(confirm01, "");
+                sysWrong.SetError(confirm01, "");
+            }
+            else if ((confirm01.Text).Any(Char.IsLower) && (confirm01.Text == "setuju"))
+            {
+                sysWarning.SetError(confirm01, "");
+                sysWrong.SetError(confirm01, "Kata harus seluruhnya dalam uppercase");
+                sysCorrect.SetError(confirm01, "");
+            }
+            else if (confirm01.Text == "")
+            {
+                sysWarning.SetError(confirm01, "Input tidak boleh kosong");
+                sysWrong.SetError(confirm01, "");
+                sysCorrect.SetError(confirm01, "");
+            }
+            else
+            {
+                sysCorrect.SetError(confirm01, "");
+                sysWarning.SetError(confirm01, "");
+                sysWrong.SetError(confirm01, "Kata harus dalam uppercase dan kalimat 'SETUJU'");
+            }
+        }
+
+        private void confirm02_TextChanged(object sender, EventArgs e)
+        {
+            if ((confirm02.Text).All(Char.IsLower) && (confirm02.Text == "setuju"))
+            {
+                sysCorrect.SetError(confirm02, "Correct");
+                sysWarning.SetError(confirm02, "");
+                sysWrong.SetError(confirm02, "");
+            }
+            else if ((confirm02.Text).Any(Char.IsUpper) && (confirm02.Text == "SETUJU"))
+            {
+                sysWarning.SetError(confirm02, "");
+                sysWrong.SetError(confirm02, "Kata harus seluruhnya dalam lowercase");
+                sysCorrect.SetError(confirm02, "");
+            }
+            else if (confirm02.Text == "")
+            {
+                sysWarning.SetError(confirm02, "Input tidak boleh kosong");
+                sysWrong.SetError(confirm02, "");
+                sysCorrect.SetError(confirm02, "");
+            }
+            else
+            {
+                sysCorrect.SetError(confirm02, "");
+                sysWarning.SetError(confirm02, "");
+                sysWrong.SetError(confirm02, "Kata harus dalam lowercase dan kalimat 'setuju'");
             }
         }
     }
