@@ -204,6 +204,8 @@ namespace P11_714220061.View
             nama_barang.Text = DataTransaksi.Rows[e.RowIndex].Cells[2].Value.ToString();
             harga.Text = DataTransaksi.Rows[e.RowIndex].Cells[3].Value.ToString();
             qty.Text = DataTransaksi.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+            TotalHarga();
         }
 
         private void btnUbah_Click(object sender, EventArgs e)
