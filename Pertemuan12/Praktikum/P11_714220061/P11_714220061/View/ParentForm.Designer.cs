@@ -30,9 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataMahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataNilaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tugasPraktikum12ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataMasterBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +45,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.dataMahasiswaToolStripMenuItem,
-            this.dataNilaiToolStripMenuItem});
+            this.dataNilaiToolStripMenuItem,
+            this.tugasPraktikum12ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1104, 28);
@@ -56,6 +60,13 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exiToolStripMenuItem
+            // 
+            this.exiToolStripMenuItem.Name = "exiToolStripMenuItem";
+            this.exiToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exiToolStripMenuItem.Text = "Exit";
+            this.exiToolStripMenuItem.Click += new System.EventHandler(this.exiToolStripMenuItem_Click);
             // 
             // dataMahasiswaToolStripMenuItem
             // 
@@ -71,12 +82,28 @@
             this.dataNilaiToolStripMenuItem.Text = "Data Nilai";
             this.dataNilaiToolStripMenuItem.Click += new System.EventHandler(this.dataNilaiToolStripMenuItem_Click);
             // 
-            // exiToolStripMenuItem
+            // tugasPraktikum12ToolStripMenuItem
             // 
-            this.exiToolStripMenuItem.Name = "exiToolStripMenuItem";
-            this.exiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exiToolStripMenuItem.Text = "Exit";
-            this.exiToolStripMenuItem.Click += new System.EventHandler(this.exiToolStripMenuItem_Click);
+            this.tugasPraktikum12ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataMasterBarangToolStripMenuItem,
+            this.dataTransaksiToolStripMenuItem});
+            this.tugasPraktikum12ToolStripMenuItem.Name = "tugasPraktikum12ToolStripMenuItem";
+            this.tugasPraktikum12ToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.tugasPraktikum12ToolStripMenuItem.Text = "Tugas Praktikum 12";
+            // 
+            // dataMasterBarangToolStripMenuItem
+            // 
+            this.dataMasterBarangToolStripMenuItem.Name = "dataMasterBarangToolStripMenuItem";
+            this.dataMasterBarangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMasterBarangToolStripMenuItem.Text = "Data Master Barang";
+            this.dataMasterBarangToolStripMenuItem.Click += new System.EventHandler(this.dataMasterBarangToolStripMenuItem_Click);
+            // 
+            // dataTransaksiToolStripMenuItem
+            // 
+            this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
+            this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataTransaksiToolStripMenuItem.Text = "Data Transaksi";
+            this.dataTransaksiToolStripMenuItem.Click += new System.EventHandler(this.dataTransaksiToolStripMenuItem_Click);
             // 
             // ParentForm
             // 
@@ -102,5 +129,8 @@
         private System.Windows.Forms.ToolStripMenuItem exiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataMahasiswaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataNilaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tugasPraktikum12ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataMasterBarangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem;
     }
 }

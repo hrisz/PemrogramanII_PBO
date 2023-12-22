@@ -84,3 +84,5 @@ C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan12\Praktikum\P11_71
 C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan12\Praktikum\P11_714220061\P11_714220061\obj\Debug\P11_714220061.pdb
 C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan12\Praktikum\P11_714220061\P11_714220061\obj\Debug\P11_714220061.View.ParentForm.resources
 C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan12\Praktikum\P11_714220061\P11_714220061\obj\Debug\P11_714220061.View.FormNilai.resources
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan12\Praktikum\P11_714220061\P11_714220061\obj\Debug\P11_714220061.View.FormBarang.resources
+C:\Users\Haris\OneDrive\Documents\PemrogramanII_PBO\Pertemuan12\Praktikum\P11_714220061\P11_714220061\obj\Debug\P11_714220061.View.FormTransaksiBarang.resources
